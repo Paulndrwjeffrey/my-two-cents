@@ -1,0 +1,11 @@
+<div class="outer">
+  <div class="inner">
+    <h3>Comments</h3>
+  </div>
+  {{#each this}}
+  <div class="inner">
+    <p class="comment-text">{{ comment }}</p>
+    <h4>- {{ user.name }} -</h4>
+  </div>
+  {{/each}}
+</div>

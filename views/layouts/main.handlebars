@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="icon" type="image/png" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Thoughts, Feelings, Opinions and Outrage</title>
 </head>
+
 <body>
+
+  <header>
+        <h1>My Two Cents</h1>
+    </header>
+
+    <nav>
+       <button class="button">
+         <a href="/">Home</a>
+       </button>
+       <button class="button">
+         <a href="/dashboard">Dashboard</a>
+       </button>
+      {{#if logged_in}}
+       <button id="logout" class="button">Logout</button>
+      {{else}}
+      <button id="login" class="button">
+      <a href="/login">Login</a>
+      </button>
+      {{/if}}
+    </nav>
   
+  <main>
+
+        {{{ body }}}
+  
+  </main>
+ 
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 </html>

@@ -1,0 +1,16 @@
+{{> onepost post}}
+
+{{#if loggedIn}}
+<div class="outer">
+  <div class="inner">
+    <textarea id="comment" class="text-input"></textarea>
+    <button id="comment-submit" class="button" type="submit">Post</button>
+  </div>  
+</div>
+{{/if}}
+
+{{> comment post.Comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

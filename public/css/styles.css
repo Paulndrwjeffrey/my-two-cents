@@ -1,0 +1,155 @@
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  font-family: 'Noto Serif', serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--superhottext);
+  transform: skew(5deg);
+}
+
+main {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+:root {
+  --hottext: rgb(37, 200, 37);
+  --skewtext: rgb(59, 138, 45);
+  --superhottext: rgb(136, 94, 204);
+}
+
+h1 {
+  font-family: 'Noto Serif', serif;
+  text-align: center;
+  color: var(--hottext);
+  font-size: 75px;
+}
+
+h2 {
+  color: var(--hottext);
+  margin: 10px;
+}
+
+h4 {
+  color: var(--superhottext);
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover {
+  transform: skew(-3deg);
+  color: var(--skewtext);
+}
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid black;
+}
+
+.button {
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: 20px;
+}
+
+.button:hover {
+  color: var(--skewtext);
+}
+
+.outer {
+  background-image: url("../assets/pattern.png");
+  background-size: contain;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.outer-form {
+  background-image: url("../assets/pattern.png");
+  background-size: contain;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+}
+
+.inner {
+  margin: 5px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.inner-form {
+    margin: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.text {
+  padding: 10px;
+  font-size: 18px;
+} 
+
+.input {
+  margin: 10px;
+  width: 100%;
+  border: 1px solid var(--hottext);
+}
+
+.comment-text {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#edit {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
+  color: whitesmoke;
+  font-size: 50px;
+}

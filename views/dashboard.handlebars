@@ -1,0 +1,15 @@
+{{#if posts.length}}
+
+    {{#each posts as |post| }}
+        {{> post post}}
+        <div class="outer">
+           <a id="edit" href="dashboard/edit/{{ id }}">EDIT</a>
+           </div>
+    {{/each}}
+
+{{else}}
+
+<h1>NO</h1>
+<h1>POSTS</h1>
+
+{{/if}}
