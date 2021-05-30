@@ -26,6 +26,9 @@
          <a href="/dashboard">Dashboard</a>
        </button>
       {{#if logged_in}}
+       <button class="button">
+         <a href="/dashboard/write">New Post</a>
+       </button>
        <button id="logout" class="button">Logout</button>
       {{else}}
       <button id="login" class="button">
@@ -43,5 +46,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
 </body>
 </html>

@@ -1,16 +1,24 @@
 {{> onepost post}}
 
-{{#if loggedIn}}
-<div class="outer">
-  <div class="inner">
-    <textarea id="comment" class="text-input"></textarea>
-    <button id="comment-submit" class="button" type="submit">Post</button>
-  </div>  
-</div>
-{{/if}}
+{{#if logged_in }}
+
+<form class="comment-form">  
+  <div class="outer-form">
+    <div class="inner-form">
+      <textarea id="comment" class="comment-input"></textarea>
+    </div>
+    <div class="inner-form">
+      <button id="comment-submit" class="button" type="submit">
+        <h3>POST</h3>
+      </button>
+    </div>  
+  </div>
+</form>
+
+{{/if }}
 
 {{> comment post.Comments}}
 
-{{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-{{/if}}
+{{#if logged_in }}
+<script src="/js/comment.js"></script>
+{{/if }}

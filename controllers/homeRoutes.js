@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const allPosts = await Post.findAll({
+      order: [ [ 'createdAt', 'DESC' ] ],
       include : [{
         model: User,
         attributes: [ 'name' ]
@@ -33,7 +34,7 @@ router.get('/', async (req, res) => {
 });
 
 //ONE POST WITH COMMENTS
-router.get('/post/:id', async (req, res) => {
+router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const postDetail = await Post.findOne({
       attributes: [ 'id', 'title', 'text'],
@@ -57,7 +58,7 @@ router.get('/post/:id', async (req, res) => {
     });
     
     const post = postDetail.get({ plain: true });
-    console.log(post);
+    
     res.render('post-detail', {
       post,
       logged_in: req.session.logged_in
@@ -101,6 +102,14 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+//DASHBOARD WRITE POST
+router.get('/dashboard/write', withAuth, async (req, res) => {
+  try {
+    res.render('write');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //DASHBOARD EDIT POST
 router.get('/dashboard/edit/:id', withAuth, async (req, res) => {

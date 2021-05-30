@@ -1,11 +1,17 @@
 <div class="outer-form">
   <div class="inner-form">
     <form class="edit">
-      <h2>title</h2>
-      {{!-- PLACEHOLDER isn't right for this.. but VALUE didn't work? --}}
-        <textarea class="input" name="title-edit" id="title" cols="75" rows="2" placeholder="{{ post.title }}"></textarea>
-      <h2>text</h2>
-        <textarea class="input" name="text-edit" id="text" cols="75" rows="10" placeholder="{{ post.text }}"></textarea>
+      <h2>Edit Post</h2>
+      <hr>
+      <h4 id="tag" data-id="{{ post.id }}">title:</h4>
+        <textarea class="input" name="title-edit" id="title" cols="75" rows="2">{{ post.title }}</textarea>
+      <h4>text:</h4>
+        <textarea class="input" name="text-edit" id="text" cols="75" rows="10">{{ post.text }}</textarea>
+        <button class="button" type="submit">
+          <h2>DONE</h2>
+        </button>
     </form>
   </div>
 </div>
+
+<script src="/js/edit.js"></script>
