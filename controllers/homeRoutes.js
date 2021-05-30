@@ -48,7 +48,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
         },
         {
           model: Comment,
-          attributes: [ 'comment' ],
+          attributes: [ 'comment', 'createdAt' ],
           include: {
             model: User,
             attributes: [ 'name' ]
@@ -121,7 +121,7 @@ router.get('/dashboard/edit/:id', withAuth, async (req, res) => {
     });
 
     const post = postInQuestion.get({ plain: true });
-    console.log(post);
+
     res.render('edit', {
       post,
       logged_in: req.session.logged_in

@@ -82,6 +82,7 @@ nav {
 }
 
 .button {
+  margin: 6px;
   background-color: whitesmoke;
   text-align: center;
   font-size: 20px;
@@ -115,10 +116,22 @@ form {
   background-size: contain;
   margin: 25px;
   display: flex;
+  flex-direction: row;
+  width: 95%;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid black;
+}
+
+.comments {
+  background-image: url("../assets/pattern.png");
+  background-size: contain;
+  margin: 25px;
+  display: flex;
   flex-direction: column;
   width: 95%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border: 3px solid black;
 }
 
